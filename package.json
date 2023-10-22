@@ -2,7 +2,8 @@
   "name": "leet-code-exercises",
   "version": "1.0.0",
   "scripts": {
-    "dev": "bun --watch ./src/worksheet.ts"
+    "dev": "bun --watch ./src/worksheet.ts",
+    "lint": "eslint . --fix --ext ts"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.8.0",
