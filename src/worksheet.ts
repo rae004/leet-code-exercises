@@ -1,6 +1,7 @@
 import isNumPalindrome from './exercises/palindromeNumber.ts';
 import romanToInt from './exercises/romanToInteger.ts';
 import longestCommonPrefix from './exercises/longestCommonPrefix.ts';
+import isValidParentheses from './exercises/validParentheses.ts';
 
 const palindromeCandidates = [
   { number: 121 },
@@ -33,8 +34,26 @@ const checkForCommonPrefix = [
   ['bearskin', 'bear', 'bearing'],
 ];
 checkForCommonPrefix.forEach((checkPrefix) =>
+  // eslint-disable-next-line no-undef
   console.log(
     `Longest prefix shared amongst ${checkPrefix.join(', ')}: `,
     longestCommonPrefix(checkPrefix),
+  ),
+);
+
+const checkValidParentheses = [
+  '(){}[]',
+  '()()',
+  '[]',
+  '[}',
+  '[]()[]',
+  '[]()[][}()',
+];
+
+checkValidParentheses.forEach((check) =>
+  // eslint-disable-next-line no-undef
+  console.log(
+    `Does ${check} have valid parentheses? `,
+    isValidParentheses(check),
   ),
 );
