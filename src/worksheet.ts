@@ -1,5 +1,6 @@
 import isNumPalindrome from './exercises/palindromeNumber.ts';
 import romanToInt from './exercises/romanToInteger.ts';
+import longestCommonPrefix from './exercises/longestCommonPrefix.ts';
 
 const palindromeCandidates = [
   { number: 121 },
@@ -23,4 +24,17 @@ const romainNumerals = [
 romainNumerals.forEach(({ numeral }) =>
   // eslint-disable-next-line no-undef
   console.log(`our Roman numeral ${numeral} as integer: `, romanToInt(numeral)),
+);
+
+const checkForCommonPrefix = [
+  ['flower', 'flow', 'flight'],
+  ['dog', 'racecar', 'car'],
+  ['caretaker', 'careless', 'cared'],
+  ['bearskin', 'bear', 'bearing'],
+];
+checkForCommonPrefix.forEach((checkPrefix) =>
+  console.log(
+    `Longest prefix shared amongst ${checkPrefix.join(', ')}: `,
+    longestCommonPrefix(checkPrefix),
+  ),
 );
